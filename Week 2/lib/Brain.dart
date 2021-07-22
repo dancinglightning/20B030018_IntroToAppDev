@@ -11,7 +11,7 @@ class QuizBrain {
     Question('Humans have two eyes', true),
     Question('First living being in space was a Human', false),
     Question('Modi is the best Prime Minister in the world', false),
-    Question('BITS Franchise is the most popular in the World', true),
+    Question('BTS is the most popular band in the World', true),
     Question('Water is the most wet thing', false),
     Question('Taj Mahal was built with love', false),
     Question('You are happy that you are stuck in home in pandemic', true),
