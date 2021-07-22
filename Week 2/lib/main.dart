@@ -35,25 +35,26 @@ class QuizPage extends StatefulWidget {
 }
 
 class _QuizPageState extends State<QuizPage> {
-  List<Icon> scoreKeeper = [];
+  List<Icon> score = [];
 
   void checkAnswer(bool userPickedAnswer) {
     bool correctAnswer = quizBrain.getCorrectAnswer();
     setState(() {
       if (quizBrain.isFinished()) {
-        Alert(context: context, title: 'Quiz Score', desc: 'Quiz Over.').show();
+        Alert(context: context, title: 'Quiz Score', desc: 'Quiz Over !')
+            .show();
         quizBrain.reset();
-        scoreKeeper.clear();
+        score.clear();
       } else {
         if (userPickedAnswer == correctAnswer) {
-          scoreKeeper.add(
+          score.add(
             Icon(
               Icons.check,
               color: Colors.green,
             ),
           );
         } else {
-          scoreKeeper.add(
+          score.add(
             Icon(
               Icons.close,
               color: Colors.red,
@@ -66,9 +67,9 @@ class _QuizPageState extends State<QuizPage> {
   }
 
   Widget build(BuildContext context) {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.stretch,
-      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+    return Row(
+      crossAxisAlignment: CrossAxisAlignment.end,
+      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
       children: [
         Expanded(
           flex: 6,
@@ -123,7 +124,7 @@ class _QuizPageState extends State<QuizPage> {
           ),
         ),
         Row(
-          children: scoreKeeper,
+          children: score,
         )
       ],
     );

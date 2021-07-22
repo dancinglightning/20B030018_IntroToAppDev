@@ -6,9 +6,9 @@ class QuizBrain {
   List<Question> _questionBank = [
     Question('Mount Everest is the Tallest Mountain', true),
     Question('IIT-B is the best institute in the world', true),
-    Question('Approximately one quarter of human bones are in the feet.', true),
-    Question('A slug\'s blood is green.', true),
-    Question('Buzz Aldrin\'s mother\'s maiden name was \"Moon\".', true),
+    Question('Human have two eyes', true),
+    Question('First being in space was human', false),
+    Question('Modi is the best Prime Minister in the world', true),
     Question('It is illegal to pee in the Ocean in Portugal.', true),
     Question(
         'No piece of square dry paper can be folded in half more than 7 times.',
