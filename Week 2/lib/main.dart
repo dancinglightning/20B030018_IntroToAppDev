@@ -95,7 +95,7 @@ class _QuizPageState extends State<QuizPage> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Container(
-              height: screenHeight * (1 / 5),
+              height: screenHeight * (1 / 6),
               width: screenWidth * (1 / 2.3),
               child: Padding(
                 padding: const EdgeInsets.all(10),
@@ -118,7 +118,7 @@ class _QuizPageState extends State<QuizPage> {
               ),
             ),
             Container(
-              height: screenHeight * (1 / 5),
+              height: screenHeight * (1 / 6),
               width: screenWidth * (1 / 2.3),
               child: Padding(
                 padding: const EdgeInsets.all(10),
