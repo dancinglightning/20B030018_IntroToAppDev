@@ -8,8 +8,9 @@ QuizBrain quizBrain = QuizBrain();
 void main() {
   runApp(
     MaterialApp(
+      debugShowCheckedModeBanner: false,
       home: Scaffold(
-        backgroundColor: Colors.grey.shade900,
+        backgroundColor: Colors.black,
         body: Quizzler(),
       ),
     ),
@@ -40,11 +41,7 @@ class _QuizPageState extends State<QuizPage> {
     bool correctAnswer = quizBrain.getCorrectAnswer();
     setState(() {
       if (quizBrain.isFinished()) {
-        Alert(
-                context: context,
-                title: 'Quiz Score',
-                desc: 'You\'ve completed the quiz.')
-            .show();
+        Alert(context: context, title: 'Quiz Score', desc: 'Quiz Over.').show();
         quizBrain.reset();
         scoreKeeper.clear();
       } else {
@@ -92,9 +89,8 @@ class _QuizPageState extends State<QuizPage> {
         Expanded(
           child: Padding(
             padding: const EdgeInsets.all(15.0),
-            child: FlatButton(
-              textColor: Colors.white,
-              color: Colors.green,
+            child: ElevatedButton(
+              style: ElevatedButton.styleFrom(primary: Colors.green[300]),
               onPressed: () {
                 checkAnswer(true);
               },
@@ -111,9 +107,8 @@ class _QuizPageState extends State<QuizPage> {
         Expanded(
           child: Padding(
             padding: const EdgeInsets.all(15.0),
-            child: FlatButton(
-              textColor: Colors.white,
-              color: Colors.red,
+            child: ElevatedButton(
+              style: ElevatedButton.styleFrom(primary: Colors.red[300]),
               onPressed: () {
                 checkAnswer(false);
               },
