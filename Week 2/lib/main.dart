@@ -49,14 +49,14 @@ class _QuizPageState extends State<QuizPage> {
         if (userPickedAnswer == correctAnswer) {
           score.add(
             Icon(
-              Icons.check,
+              Icons.task_alt,
               color: Colors.green,
             ),
           );
         } else {
           score.add(
             Icon(
-              Icons.close,
+              Icons.cancel,
               color: Colors.red,
             ),
           );
@@ -68,7 +68,7 @@ class _QuizPageState extends State<QuizPage> {
 
   Widget build(BuildContext context) {
     return Column(
-      crossAxisAlignment: CrossAxisAlignment.stretch,
+      crossAxisAlignment: CrossAxisAlignment.center,
       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
       children: [
         Container(
@@ -133,8 +133,10 @@ class _QuizPageState extends State<QuizPage> {
             )
           ],
         ),
-        Row(
-          children: score,
+        Center(
+          child: Row(
+            children: score,
+          ),
         )
       ],
     );
