@@ -92,11 +92,11 @@ class _QuizPageState extends State<QuizPage> {
         ),
         Row(
           crossAxisAlignment: CrossAxisAlignment.center,
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Container(
               height: screenHeight * (1 / 4),
-              width: screenWidth * (1 / 2.1),
+              width: screenWidth * (1 / 2.5),
               child: Padding(
                 padding: const EdgeInsets.all(10),
                 child: ElevatedButton(
@@ -119,7 +119,7 @@ class _QuizPageState extends State<QuizPage> {
             ),
             Container(
               height: screenHeight * (1 / 4),
-              width: screenWidth * (1 / 2.1),
+              width: screenWidth * (1 / 2.5),
               child: Padding(
                 padding: const EdgeInsets.all(10),
                 child: ElevatedButton(

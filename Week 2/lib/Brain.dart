@@ -17,6 +17,8 @@ class QuizBrain {
     Question('You are happy that you are stuck in home in pandemic', true),
     Question(
         'Vatican city is the country with most number of COVID cases', false),
+    Question('Iron Man is the Strongest Super Hero', true),
+    Question('There exists 26 alphabets in total', false),
   ];
 
   void getNextQuestion() {
