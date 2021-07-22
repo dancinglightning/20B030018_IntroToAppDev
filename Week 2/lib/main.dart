@@ -5,7 +5,7 @@ void main() {
   runApp(
     MaterialApp(
       home: Scaffold(
-        backgroundColor: Colors.grey,
+        backgroundColor: Colors.black54,
         body: Quiz(),
       ),
     ),
@@ -17,7 +17,7 @@ class Quiz extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Padding(
-        padding: EdgeInsets.symmetric(horizontal: 10.0),
+        padding: EdgeInsets.symmetric(horizontal: 20),
         child: QuizPage(),
       ),
     );
@@ -26,6 +26,26 @@ class Quiz extends StatelessWidget {
 
 class QuizPage extends StatelessWidget {
   Widget build(BuildContext context) {
-    return Container();
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.stretch,
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      children: [
+        Expanded(
+          child: Padding(
+            padding: const EdgeInsets.all(10.0),
+            child: Center(
+              child: Text(
+                'This is where question go',
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 30,
+                ),
+              ),
+            ),
+          ),
+        ),
+      ],
+    );
   }
 }
