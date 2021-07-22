@@ -71,8 +71,8 @@ class _QuizPageState extends State<QuizPage> {
       crossAxisAlignment: CrossAxisAlignment.stretch,
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
-        Expanded(
-          flex: 6,
+        Container(
+          height: 300,
           child: Padding(
             padding: const EdgeInsets.all(10),
             child: Center(

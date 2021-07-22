@@ -9,7 +9,7 @@ class QuizBrain {
     Question('Humans have two eyes', true),
     Question('First living being in space was a Human', false),
     Question('Modi is the best Prime Minister in the world', true),
-    Question('It is illegal to pee in the Ocean in Portugal.', true),
+    Question('It is ille.', true),
     Question(
         'No piece of square dry paper can be folded in half more than 7 times.',
         false),
