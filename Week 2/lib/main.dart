@@ -67,61 +67,71 @@ class _QuizPageState extends State<QuizPage> {
   }
 
   Widget build(BuildContext context) {
-    return Row(
+    return Column(
       crossAxisAlignment: CrossAxisAlignment.stretch,
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
         Expanded(
           flex: 6,
           child: Padding(
-            padding: const EdgeInsets.all(10.0),
+            padding: const EdgeInsets.all(10),
             child: Center(
               child: Text(
                 quizBrain.getQuestion(),
                 textAlign: TextAlign.center,
                 style: TextStyle(
                   color: Colors.white,
-                  fontSize: 25.0,
+                  fontSize: 40,
                 ),
               ),
             ),
           ),
         ),
-        Expanded(
-          child: Padding(
-            padding: const EdgeInsets.all(15.0),
-            child: ElevatedButton(
-              style: ElevatedButton.styleFrom(primary: Colors.green[300]),
-              onPressed: () {
-                checkAnswer(true);
-              },
-              child: Text(
-                'True',
-                style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 24.0,
+        Row(
+          children: [
+            Expanded(
+              child: Padding(
+                padding: const EdgeInsets.all(10),
+                child: ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                      primary: Colors.green[300],
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(10))),
+                  onPressed: () {
+                    checkAnswer(true);
+                  },
+                  child: Text(
+                    'True',
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 40,
+                    ),
+                  ),
                 ),
               ),
             ),
-          ),
-        ),
-        Expanded(
-          child: Padding(
-            padding: const EdgeInsets.all(15.0),
-            child: ElevatedButton(
-              style: ElevatedButton.styleFrom(primary: Colors.red[300]),
-              onPressed: () {
-                checkAnswer(false);
-              },
-              child: Text(
-                'False',
-                style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 24.0,
+            Expanded(
+              child: Padding(
+                padding: const EdgeInsets.all(10),
+                child: ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                      primary: Colors.red[300],
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(10))),
+                  onPressed: () {
+                    checkAnswer(false);
+                  },
+                  child: Text(
+                    'False',
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 40,
+                    ),
+                  ),
                 ),
               ),
-            ),
-          ),
+            )
+          ],
         ),
         Row(
           children: score,
