@@ -11,13 +11,13 @@ void main() {
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         backgroundColor: Colors.black,
-        body: Quizzler(),
+        body: Quiz(),
       ),
     ),
   );
 }
 
-class Quizzler extends StatelessWidget {
+class Quiz extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
