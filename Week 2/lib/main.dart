@@ -68,13 +68,14 @@ class _QuizPageState extends State<QuizPage> {
 
   Widget build(BuildContext context) {
     MediaQueryData mediaQueryData = MediaQuery.of(context);
+    double screenWidth = mediaQueryData.size.width;
     double screenHeight = mediaQueryData.size.height;
     return Column(
       crossAxisAlignment: CrossAxisAlignment.center,
-      mainAxisAlignment: MainAxisAlignment.center,
+      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
       children: [
         Container(
-          height: screenHeight * (0.5),
+          height: screenHeight * (2 / 3),
           child: Padding(
             padding: const EdgeInsets.all(10),
             child: Center(
@@ -90,8 +91,12 @@ class _QuizPageState extends State<QuizPage> {
           ),
         ),
         Row(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
-            Expanded(
+            Container(
+              height: screenHeight * (1 / 4),
+              width: screenWidth * (1 / 2.1),
               child: Padding(
                 padding: const EdgeInsets.all(10),
                 child: ElevatedButton(
@@ -112,7 +117,9 @@ class _QuizPageState extends State<QuizPage> {
                 ),
               ),
             ),
-            Expanded(
+            Container(
+              height: screenHeight * (1 / 4),
+              width: screenWidth * (1 / 2.1),
               child: Padding(
                 padding: const EdgeInsets.all(10),
                 child: ElevatedButton(
