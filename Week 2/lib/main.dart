@@ -96,7 +96,7 @@ class _QuizPageState extends State<QuizPage> {
           children: [
             Container(
               height: screenHeight * (1 / 5),
-              width: screenWidth * (1 / 2.5),
+              width: screenWidth * (1 / 2.3),
               child: Padding(
                 padding: const EdgeInsets.all(10),
                 child: ElevatedButton(
@@ -119,7 +119,7 @@ class _QuizPageState extends State<QuizPage> {
             ),
             Container(
               height: screenHeight * (1 / 5),
-              width: screenWidth * (1 / 2.5),
+              width: screenWidth * (1 / 2.3),
               child: Padding(
                 padding: const EdgeInsets.all(10),
                 child: ElevatedButton(
