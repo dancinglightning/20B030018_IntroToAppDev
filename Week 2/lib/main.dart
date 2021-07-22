@@ -67,12 +67,14 @@ class _QuizPageState extends State<QuizPage> {
   }
 
   Widget build(BuildContext context) {
+    MediaQueryData mediaQueryData = MediaQuery.of(context);
+    double screenHeight = mediaQueryData.size.height;
     return Column(
       crossAxisAlignment: CrossAxisAlignment.center,
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         Container(
-          height: 300,
+          height: screenHeight * (0.5),
           child: Padding(
             padding: const EdgeInsets.all(10),
             child: Center(
