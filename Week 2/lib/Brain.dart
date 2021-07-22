@@ -4,31 +4,19 @@ class QuizBrain {
   int _questionNumber = 0;
 
   List<Question> _questionBank = [
+    Question('Answer to this question is True', false),
+    Question('Answer to previous question is False', false),
     Question('Mount Everest is the Tallest Mountain', true),
-    Question('IIT-B is the Best Institute in the entire World', true),
+    Question('IIT-B is the Best Institute in the World', true),
     Question('Humans have two eyes', true),
     Question('First living being in space was a Human', false),
-    Question('Modi is the best Prime Minister in the world', true),
-    Question('It is ille.', true),
+    Question('Modi is the best Prime Minister in the world', false),
+    Question('BITS Franchise is the most popular in the World', true),
+    Question('Water is the most wet thing', false),
+    Question('Taj Mahal was built with love', false),
+    Question('You are happy that you are stuck in home in pandemic', true),
     Question(
-        'No piece of square dry paper can be folded in half more than 7 times.',
-        false),
-    Question(
-        'In London, UK, if you happen to die in the House of Parliament, you are technically entitled to a state funeral, because the building is considered too sacred a place.',
-        true),
-    Question(
-        'The loudest sound produced by any animal is 188 decibels. That animal is the African Elephant.',
-        false),
-    Question(
-        'The total surface area of two human lungs is approximately 70 square metres.',
-        true),
-    Question('Google was originally called \"Backrub\".', true),
-    Question(
-        'Chocolate affects a dog\'s heart and nervous system; a few ounces are enough to kill a small dog.',
-        true),
-    Question(
-        'In West Virginia, USA, if you accidentally hit an animal with your car, you are free to take it home to eat.',
-        true),
+        'Vatican city is the country with most number of COVID cases', false),
   ];
 
   void getNextQuestion() {
