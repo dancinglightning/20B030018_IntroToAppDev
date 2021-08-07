@@ -63,20 +63,12 @@ class _LoginDemoState extends State<LoginDemo> {
                     hintText: 'Enter secure password'),
               ),
             ),
-            FlatButton(
-              onPressed: () {
-                //TODO FORGOT PASSWORD SCREEN GOES HERE
-              },
-              child: Text(
-                'Forgot Password',
-                style: TextStyle(color: Colors.blue, fontSize: 15),
-              ),
-            ),
             Container(
               height: 50,
               width: 250,
               decoration: BoxDecoration(
                   color: Colors.blue, borderRadius: BorderRadius.circular(20)),
+              // ignore: deprecated_member_use
               child: FlatButton(
                 onPressed: () {
                   Navigator.push(
